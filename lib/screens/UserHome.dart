@@ -15,12 +15,14 @@ class UserHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(children: [
-      Container(
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                fit: BoxFit.cover,
-                image: NetworkImage(
-                    "https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fHdvbWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"))),
+      Hero(
+        tag: "home",
+        child: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage("images/oip/pic16.jpg"))),
+        ),
       ),
       // StreamBuilder<QuerySnapshot>(
       //     stream: db
@@ -43,7 +45,7 @@ class UserHome extends StatelessWidget {
           top: (MediaQuery.of(context).size.height) * 0.10,
           child: GestureDetector(
             onTap: () {
-              Get.to(SignInPage(), transition: Transition.cupertino);
+              Get.to(SignInPage(), transition: Transition.rightToLeftWithFade);
             },
             child: Text(
               "SIGN IN",

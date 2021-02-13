@@ -48,6 +48,7 @@ flutter:
   assets:
     
     - images/oracle.jpg
+    - images/shatta.jpg
   
     - images/men/clothings.jpg
     - images/men/newin.jpg
@@ -57,6 +58,45 @@ flutter:
     - images/women/newin.jpg
     - images/women/accessories.jpg
     - images/women/shoes.jpg
+    - images/clothes/tshirt.jpg
+    - images/clothes/overall.jpg
+    - images/clothes/skirt.jpg
+    - images/clothes/sweater.jpg
+    - images/clothes/dress.jpg
+    - images/clothes/jeans.jpg
+    - images/clothes/jacket.jpg
+    - images/home.jpg
+    - images/genderchoice.jpg
+    - images/tshirts/tshirt1.webp
+    - images/tshirts/tshirt2.webp
+    - images/tshirts/tshirt3.webp
+    - images/tshirts/tshirt4.webp
+    - images/tshirts/tshirt5.webp
+    - images/tshirts/tshirt6.webp
+    - images/tshirts/tshirt7.webp
+    - images/tshirts/tshirt8.webp
+    - images/oip/pic1.jpg
+    - images/oip/pic2.jpg
+    - images/oip/pic3.jpg
+    - images/oip/pic4.jpg
+    - images/oip/pic5.jpg
+    - images/oip/pic6.jpg
+    - images/oip/pic7.jpg
+    - images/oip/pic8.jpg
+    - images/oip/pic9.jpg
+    - images/oip/pic10.jpg
+    - images/oip/pic11.jpg
+    - images/oip/pic12.jpg
+    - images/oip/pic13.jpg
+    - images/oip/pic14.jpg
+    - images/oip/pic15.jpg
+    - images/oip/pic16.jpg
+    - images/oip/pic16a.jpg
+    - images/oip/pic17.jpg
+    - images/oip/pic18.jpg
+
+
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -30,12 +30,14 @@ class _SignUpPageState extends State<SignUpPage> {
                   children: [
                     Row(
                       children: [
-                        IconButton(
-                          onPressed: () {
+                        GestureDetector(
+                          onTap: () {
                             Get.back();
                           },
-                          icon: Icon(Icons.arrow_back_ios),
-                          color: Colors.white,
+                          child: Icon(
+                            Icons.arrow_back_ios,
+                            color: Colors.white,
+                          ),
                         ),
                         Text("Back",
                             style: TextStyle(fontSize: 15, color: Colors.white))

@@ -7,8 +7,11 @@ import 'package:version1/screens/CategoriesScreen.dart';
 import 'package:version1/screens/UserHome.dart';
 import 'package:version1/widgets.dart';
 import 'package:get/get.dart';
+import 'MenCategoryScreen.dart';
+import 'WomenCategoryScreen.dart';
 
 class GenderChoicePage extends StatelessWidget {
+  TreeLevelController treeController = Get.put(TreeLevelController());
   CategoriesScreenController controller = Get.put(CategoriesScreenController());
 
   FirebaseFirestore db = FirebaseFirestore.instance;
@@ -19,9 +22,7 @@ class GenderChoicePage extends StatelessWidget {
       Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                fit: BoxFit.cover,
-                image: NetworkImage(
-                    "https://images.unsplash.com/photo-1604942926673-48ee8a893c34?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=443&q=80"))),
+                fit: BoxFit.cover, image: AssetImage("images/oip/pic2.jpg"))),
       ),
 
       // StreamBuilder<QuerySnapshot>(
@@ -43,9 +44,10 @@ class GenderChoicePage extends StatelessWidget {
       Center(
         child: Column(
           children: [
-            SizedBox(
-              height: (MediaQuery.of(context).size.height) * 0.70,
-            ),
+            Spacer(flex: 3),
+            // SizedBox(
+            //   height: (MediaQuery.of(context).size.height) * 0.50,
+            // ),
             Text(
               "Make your",
               style: buildABeeZee(30),
@@ -54,7 +56,10 @@ class GenderChoicePage extends StatelessWidget {
               "purchases as",
               style: buildABeeZee(30),
             ),
-            SizedBox(height: 40),
+            Spacer(
+              flex: 2,
+            ),
+            // SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -62,10 +67,13 @@ class GenderChoicePage extends StatelessWidget {
                   onTap: () {
                     controller.change(0);
                     controller.changeLabel("WOMEN");
-                    Get.to(
-                        Obx(() => CategoriesScreen(
-                            gender: screens[controller.screen.value])),
+                    treeController.reset();
+                    Get.to(WomenCategories(),
                         transition: Transition.rightToLeftWithFade);
+                    // Get.to(
+                    //     Obx(() => CategoriesScreen(
+                    //         gender: screens[controller.screen.value])),
+                    //     transition: Transition.rightToLeftWithFade);
                   },
                   child: LongButton(
                       text: "WOMEN", color: Colors.white, short: true),
@@ -77,10 +85,12 @@ class GenderChoicePage extends StatelessWidget {
                     onTap: () {
                       controller.change(1);
                       controller.changeLabel("MEN");
-                      Get.to(
-                          Obx(() => CategoriesScreen(
-                              gender: screens[controller.screen.value])),
+                      Get.to(MenCategories(),
                           transition: Transition.rightToLeftWithFade);
+                      // Get.to(
+                      //     Obx(() => CategoriesScreen(
+                      //         gender: screens[controller.screen.value])),
+                      //     transition: Transition.rightToLeftWithFade);
                     },
                     child: LongButton(
                       text: "MEN",
@@ -88,7 +98,8 @@ class GenderChoicePage extends StatelessWidget {
                       transparent: true,
                     )),
               ],
-            )
+            ),
+            SizedBox(height: MediaQuery.of(context).size.height * 0.05),
           ],
         ),
       ),

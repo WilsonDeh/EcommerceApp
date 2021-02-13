@@ -19,45 +19,48 @@ class SignInPage extends StatelessWidget {
         key: _formKey,
         child: ListView(
           children: [
-            Container(
-              child: Padding(
-                padding: const EdgeInsets.all(25.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        IconButton(
-                          onPressed: () {
-                            Get.back();
-                          },
-                          icon: Icon(Icons.arrow_back_ios),
-                          color: Colors.white,
-                        ),
-                        Text("Back",
-                            style: TextStyle(fontSize: 15, color: Colors.white))
-                      ],
+            Hero(
+              tag: "home",
+              child: Material(
+                child: Container(
+                    child: Padding(
+                      padding: const EdgeInsets.all(25.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  Get.back();
+                                },
+                                child: Icon(
+                                  Icons.arrow_back_ios,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 30,
+                          ),
+                          Text(
+                            "Log into",
+                            style: buildABeeZee(30),
+                          ),
+                          Text(
+                            "Your account",
+                            style: buildABeeZee(30),
+                          ),
+                        ],
+                      ),
                     ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    Text(
-                      "Log into",
-                      style: buildABeeZee(30),
-                    ),
-                    Text(
-                      "Your account",
-                      style: buildABeeZee(30),
-                    ),
-                  ],
-                ),
+                    height: (MediaQuery.of(context).size.height) * 0.3,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage("images/oip/pic16a.jpg"),
+                            fit: BoxFit.cover))),
               ),
-              height: (MediaQuery.of(context).size.height) * 0.3,
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment(0.0, -1.0),
-                      end: Alignment(0.0, 1.0),
-                      colors: [Colors.black54, Colors.black87])),
             ),
             Padding(
               padding: const EdgeInsets.all(32.0),
