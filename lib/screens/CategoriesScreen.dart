@@ -47,10 +47,10 @@ class CategoriesScreen extends StatelessWidget {
 
 class WomenCategories extends StatelessWidget {
   List<String> women = [
-    "https://images.unsplash.com/photo-1532179867542-0818a841bd1c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
-    "https://img.freepik.com/free-photo/hand-holding-shopping-bags-plain-background_23-2148286215.jpg?size=626&ext=jpg&ga=GA1.2.746320220.1599350400",
-    "https://images.unsplash.com/photo-1604947051230-fc2bc6f6c5c9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8d29tZW4lMjBmYXNoaW9ufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-fresh-and-simple-women-s-shoes-promotion-banner-image_145853.jpg"
+    "images/women/newin.jpg",
+    "images/women/accessories.jpg",
+    "images/women/clothings.jpg",
+    "images/women/shoes.jpg"
   ];
   CategoriesScreenController controller = Get.put(CategoriesScreenController());
 
@@ -76,7 +76,7 @@ class WomenCategories extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     image: DecorationImage(
-                        fit: BoxFit.cover, image: NetworkImage(women[index]))),
+                        fit: BoxFit.cover, image: AssetImage(women[index]))),
               ),
             ),
             Positioned(
@@ -94,10 +94,10 @@ class WomenCategories extends StatelessWidget {
 
 class MenCategories extends StatelessWidget {
   List<String> men = [
-    "https://wallpaperaccess.com/full/2489626.jpg",
-    "https://images.unsplash.com/photo-1590526599411-42bcd63d50fe?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTF8fGFjY2Vzc29yaWVzJTIwZm9yJTIwbWVufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "https://www.teahub.io/photos/full/88-885573_polo-shirt.jpg",
-    "https://images.unsplash.com/photo-1523212465813-857a9d1a19f4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1189&q=80",
+    "images/men/newin.jpg",
+    "images/men/accessories.jpg",
+    "images/men/clothings.jpg",
+    "images/men/shoes.jpg",
   ];
   CategoriesScreenController controller = Get.put(CategoriesScreenController());
 
@@ -123,7 +123,7 @@ class MenCategories extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     image: DecorationImage(
-                        fit: BoxFit.cover, image: NetworkImage(men[index]))),
+                        fit: BoxFit.cover, image: AssetImage(men[index]))),
               ),
             ),
             Positioned(

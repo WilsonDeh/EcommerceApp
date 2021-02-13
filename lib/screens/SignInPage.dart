@@ -107,7 +107,7 @@ class SignInPage extends StatelessWidget {
                                         children: [
                                           Image(
                                             image:
-                                                AssetImage("images/shatta.jpg"),
+                                                AssetImage("images/oracle.jpg"),
                                           ),
                                           SizedBox(
                                             height: 20,
